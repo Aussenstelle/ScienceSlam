@@ -21,6 +21,7 @@ img {
 h1 {
 	text-align: center;
 }
-p {
-	color:yellow;
+p.center {
+	text-align: center;
+	color: yellow;
 }
