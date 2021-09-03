@@ -1,9 +1,7 @@
 a:hover {
 	color:red;
-	
 }
 html {
-	
 	background-color: #003366
 }
 body {
@@ -39,7 +37,6 @@ ol {
                                             Abschnittszählers. */
   list-style-type: none;
 }
-
 li::before {
   counter-increment: section;            /* Inkrementiert nur diese Instanz
                                             des Abschnittszählers. */
@@ -50,8 +47,6 @@ li::before {
                                             sollte sichergestellt werden, dass
                                             kein Leerzeichen nach dem ',' steht. */
 											/*Copied from developer.mozilla.org*/
-}
-li:after {
 }
 iframe {
 	border:none;

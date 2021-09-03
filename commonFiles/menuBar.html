@@ -12,14 +12,34 @@
 	div.menuText {
 		font-weight: bold;
 	}
+	ol {
+		counter-reset: section;                /* Erstellt mit jedem ol Element
+                                            eine neue Instanz des
+                                            Abschnittszählers. */
+		list-style-type: none;
+	}
+	li::before {
+		counter-increment: section;            /* Inkrementiert nur diese Instanz
+                                            des Abschnittszählers. */
+		content: counters(section,".") ". ";    /* Fügt den Wert aller Instanzen
+                                            des Abschnittszählers durch "."
+                                            getrennt hinzu. */
+                                         /* Falls < IE8 unterstützt werden soll,
+                                            sollte sichergestellt werden, dass
+                                            kein Leerzeichen nach dem ',' steht. */
+											/*Copied from developer.mozilla.org*/
+	}
+	a:hover {
+	color:red;
+}
 </style>
 <div class="menuText">Menu
 	<div class="menu">
 		<ol>
-			<li>Die Idee</li>
+			<li><a href="../pages/dieIdee/dieIdee.html" target="_PARENT">Die Idee</a></li>
 			<li>Das System
 				<ol>
-					<li>Der Aufbau des Systems</li>
+					<li><a href="../pages/dasSystem/aufbau/aufbau.html" target="_PARENT">Der Aufbau des Systems</a></li>
 					<li>Die Komponenten
 						<ol>
 							<li>Der Server</li>
