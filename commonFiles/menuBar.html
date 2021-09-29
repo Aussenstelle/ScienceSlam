@@ -1,0 +1,61 @@
+<style>
+	div.menu {
+		padding-right: 10px;
+		border: 2px solid black;
+		background-color: ff9900;
+		display: none;
+		position: absolute;
+	}
+	div.menuText:hover div.menu {
+		display:block;
+	}
+	div.menuText {
+		font-weight: bold;
+	}
+	ol {
+		counter-reset: section;                /* Erstellt mit jedem ol Element
+                                            eine neue Instanz des
+                                            Abschnittszählers. */
+		list-style-type: none;
+	}
+	li::before {
+		counter-increment: section;            /* Inkrementiert nur diese Instanz
+                                            des Abschnittszählers. */
+		content: counters(section,".") ". ";    /* Fügt den Wert aller Instanzen
+                                            des Abschnittszählers durch "."
+                                            getrennt hinzu. */
+                                         /* Falls < IE8 unterstützt werden soll,
+                                            sollte sichergestellt werden, dass
+                                            kein Leerzeichen nach dem ',' steht. */
+											/*Copied from developer.mozilla.org*/
+	}
+	a:hover {
+	color:red;
+}
+</style>
+<div class="menuText">Menu
+	<div class="menu">
+		<ol>
+			<li><a href="../pages/dieIdee/dieIdee.html" target="_PARENT">Die Idee</a></li>
+			<li>Das System
+				<ol>
+					<li><a href="../pages/dasSystem/aufbau/aufbau.html" target="_PARENT">Der Aufbau des Systems</a></li>
+					<li>Die Komponenten
+						<ol>
+							<li>Der Server</li>
+							<li>Das Panel</li>
+							<li>Die Bridge</li>
+							<li>Die Devices</li>
+						</ol>
+					</li>
+					<li>Die Protokolle
+						<ol>
+							<li>Panel - Server</li>
+							<li>Bridge - Device: MorseBinNET2</li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+		</ol>
+	</div>
+</div>

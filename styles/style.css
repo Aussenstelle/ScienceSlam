@@ -1,13 +1,11 @@
 a:hover {
 	color:red;
-	
 }
 html {
-	
 	background-color: #003366
 }
 body {
-  width: 700px;
+  width: 75%;
   margin: 0 auto;
   background-color: #33cccc;
   padding: 0 20px 20px 20px;
@@ -23,5 +21,37 @@ h1 {
 }
 p.center {
 	text-align: center;
-	color: yellow;
+}
+p.quote {
+	font-style: oblique;
+}
+p.quote:before {
+	content:'"'
+}
+p.quote:after {
+	content:'"'
+}
+ol {
+  counter-reset: section;                /* Erstellt mit jedem ol Element
+                                            eine neue Instanz des
+                                            Abschnittszählers. */
+  list-style-type: none;
+}
+li::before {
+  counter-increment: section;            /* Inkrementiert nur diese Instanz
+                                            des Abschnittszählers. */
+  content: counters(section,".") ". ";    /* Fügt den Wert aller Instanzen
+                                            des Abschnittszählers durch "."
+                                            getrennt hinzu. */
+                                         /* Falls < IE8 unterstützt werden soll,
+                                            sollte sichergestellt werden, dass
+                                            kein Leerzeichen nach dem ',' steht. */
+											/*Copied from developer.mozilla.org*/
+}
+iframe {
+	border:none;
+	width: 100%;
+	height: 100%;
+	display:block;
+	position:absolute;
 }
