@@ -19,6 +19,9 @@ img {
 h1 {
 	text-align: center;
 }
+h4 {
+	text-align: center;
+}
 p.center {
 	text-align: center;
 }
@@ -50,8 +53,15 @@ li::before {
 }
 iframe {
 	border:none;
+	display: block;
+	position: absolute;
 	width: 100%;
 	height: 100%;
-	display:block;
-	position:absolute;
+}
+div.textblock {
+	border: solid;
+	border-color: black;
+	padding-left: 5px;
+	margin-top: 5px;
+	background-color: ff9900;
 }

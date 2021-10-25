@@ -8,9 +8,16 @@
 	}
 	div.menuText:hover div.menu {
 		display:block;
+		color: black;
+	}
+	div.menuText:hover {
+		color: red;
 	}
 	div.menuText {
 		font-weight: bold;
+		color: blue;
+		display: inline-block;
+		position: relative;
 	}
 	ol {
 		counter-reset: section;                /* Erstellt mit jedem ol Element
@@ -30,32 +37,42 @@
 											/*Copied from developer.mozilla.org*/
 	}
 	a:hover {
-	color:red;
-}
+		color:red;
+	}
+	a:visited:not(:hover) {
+		color: blue;
+	}
+	a.home {
+		font-weight: bold;
+		text-decoration: none;
+	}
 </style>
-<div class="menuText">Menu
-	<div class="menu">
-		<ol>
-			<li><a href="../pages/dieIdee/dieIdee.html" target="_PARENT">Die Idee</a></li>
-			<li>Das System
-				<ol>
-					<li><a href="../pages/dasSystem/aufbau/aufbau.html" target="_PARENT">Der Aufbau des Systems</a></li>
-					<li>Die Komponenten
-						<ol>
-							<li>Der Server</li>
-							<li>Das Panel</li>
-							<li>Die Bridge</li>
-							<li>Die Devices</li>
-						</ol>
-					</li>
-					<li>Die Protokolle
-						<ol>
-							<li>Panel - Server</li>
-							<li>Bridge - Device: MorseBinNET2</li>
-						</ol>
-					</li>
-				</ol>
-			</li>
-		</ol>
+<div>
+	<a href="../index.html" target="_PARENT" class="home">Startseite</a>
+	<div class="menuText">Menu
+		<div class="menu">
+			<ol>
+				<li><a href="../pages/dieIdee/dieIdee.html" target="_PARENT">Die Idee</a></li>
+				<li>Das System
+					<ol>
+						<li><a href="../pages/dasSystem/aufbau/aufbau.html" target="_PARENT">Der Aufbau des Systems</a></li>
+						<li>Die Komponenten
+							<ol>
+								<li>Der Server</li>
+								<li>Das Panel</li>
+								<li>Die Bridge</li>
+								<li>Die Devices</li>
+							</ol>
+						</li>
+						<li>Die Protokolle
+							<ol>
+								<li>Panel - Server</li>
+								<li><a href="../pages/dasSystem/protokolle/MorseBinNET2EM/MorseBinNET2EM.html" target="_PARENT">Bridge - Device: MorseBinNET2EM</a></li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+			</ol>
+		</div>
 	</div>
 </div>

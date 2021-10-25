@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<link href="../../../../styles/style.css" rel="stylesheet">
+		<title>MorseBinNET2EM</title>
+	</head>
+	<body>
+		<iframe src="../../../../commonFiles/menuBar.html" scrolling="no"></iframe>
+		<h1>MorseBinNET2EM</h1>
+		<div class="textblock">
+			<h4>Die Vorgeschichte</h4>
+			<p>
+				Die erste Version war MorseBin, ich hatte sie im Sommer 2020 auf Github hochgeladen. (Ich konnte leider kein genaues Datum finden.) Auf jeden fall wurde MorseBin auch von <a href="https://github.com/gioblu/PJON">PJON</a>
+				inspiriert, PJON ist ein Netzwerkprotokoll für Microcontroller, aber einige Teile können sogar auf normalen PCs verwendet werden.
+				(<a href="https://github.com/gioblu/PJON">Beschreibung von PJON (Englisch) </a> / <a href="https://github.com/gioblu/PJON/wiki">Liste von unterstützten Geräten (Englisch)</a>) <br> MorseBin erlaubte jedoch nur
+				Kommunikation in eine Richtung und war sehr langsam, aber der fundamentale Aufbau der elektrischen Signale hat sich bis zur neuesten Version nur wenig verändert. Wie das Protokoll genau funktioniert erkläre ich noch später.
+				Danach kam MorseBinNET, womit man schon ein kleines Netzwerk hatte mit bis zu 255 Geräten. MorseBinNET brauchte (und braucht bis Heute) nur eine Ader, aber da ich nicht wusste, dass man einen Pin von einem Arduino auch im 
+				Normalen Betrieb von einem Eingang zu einem Ausgang umstellen kann, musste man zwei Pins verwenden. Da MorseBinNET auf den Funktionen von MorseBin aufbaute, war es genauso langsam. Im Mai dieses Jahres (2021) habe ich dann 
+				MorseBinNET2 auf Github hochgeladen. (Auch hier konnte ich leider keine genaueren Daten finden als den ersten "Commit" auf GitHub) MorseBinNET2 ist identisch mit MorseBinNET, MorseBinNET2 ist jedoch erheblich schneller, nach 
+				meinen Berechnungen können Geschwindikteiten von bis zu 563 Bytes/Sek erreicht werden (zumindest in der Theorie). Erst nachdem ich MorseBinNET2 entwickelt hatte lud ich MorseBin2 auf github hoch, da MorseBinNET2 die Funktionen 
+				zum Versenden und Empfangen selbst beinhaltet. Mit MorseBin2 wollte ich (und will immer noch) ein Hardware-Mesh-Netzwerk entwickeln, womit man mehrere MorseBinNET2-Netzwerke miteinander verbinden kann. Dieses Projekt ist jedoch 
+				noch in den Anfängen. Die nächsten zwei Versionen habe ich unter anderem für dieses Projekt entwickelt, zum einen MorseBinNET2E, wobei das "E" für "Extended" steht, bei dieser Version werden einfach statt zwei Bytes nun 8 Bytes 
+				versendet. Die Zweite Version, die ich für dieses Projekt entwickelt habe ist MorseBinNET2EM, das "E" steht wieder für "Extended", das zusätzliche "M" steht jedoch für "Managed". Diese Version hat eine Automatische Adressvergabe.
+			</p>
+		</div>
+		sdgdgrdfdfdf
+		<div class="textblock">
+			<h4>Die Grundlage: MorseBin</h4>
+			<p>
+				Wie der Name sagt, werden die Bits und Bytes hier "gemorsed". Ein langes Signal steht für eine 0, ein kurzes für eine 1. Am ende ist das die Ganze Magie. Am anfang hatte ich die Einzelnen Bytes einfach in 8-ter Blöcken gesendet, wenn 
+				also der Empfänger und der Versender nicht 100%ig miteinander syncron waren kamen die Bits in der Falschen Reihenfolge an. Gelöst habe ich das durch ein Startsignal, das länger ist als eine 0, wodurch ich es herausfiltern kann und nur 
+				dann auf die nächsten acht Bits hören kann, wodurch entweder ein Byte, das gerade Versendet wird, wo man den Anfang verpasst hat, nicht mehr empfangen wird oder das Byte intakt empfangen wird. Ich habe die Bytes in einer Zeichenfolge 
+				aus acht Zeichen, entweder eine 0 oder eine 1, gespeichert, ich bin nicht ganz zufrieden mit dieser Lösung, da sie unnötig viel Ram verbraucht, aber die Verarbeitung von Bytes in diesem Format ist sehr simpel.
+			</p>
+		</div>
+	</body>
+</html>
