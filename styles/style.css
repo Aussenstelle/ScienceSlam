@@ -55,6 +55,8 @@ iframe {
 	border:none;
 	display: block;
 	position: absolute;
+	width: 100%;
+	height: 100%;
 }
 div.textblock {
 	border: solid;
