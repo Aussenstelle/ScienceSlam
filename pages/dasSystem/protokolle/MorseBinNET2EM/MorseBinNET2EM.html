@@ -10,9 +10,8 @@
 			<h4>Die Vorgeschichte</h4>
 			<p>
 				Die erste Version war MorseBin, ich hatte sie im Sommer 2020 auf Github hochgeladen. (Ich konnte leider kein genaues Datum finden.) Auf jeden fall wurde MorseBin auch von <a href="https://github.com/gioblu/PJON">PJON</a>
-				inspiriert, PJON ist ein Netzwerkprotokoll für Microcontroller, aber einige Teile können sogar auf normalen PCs verwendet werden.
-				(<a href="https://github.com/gioblu/PJON">Beschreibung von PJON (Englisch) </a> / <a href="https://github.com/gioblu/PJON/wiki">Liste von unterstützten Geräten (Englisch)</a>) <br> MorseBin erlaubte jedoch nur
-				Kommunikation in eine Richtung und war sehr langsam, aber der fundamentale Aufbau der elektrischen Signale hat sich bis zur neuesten Version nur wenig verändert. Wie das Protokoll genau funktioniert erkläre ich noch später.
+				inspiriert, PJON ist ein Netzwerkprotokoll für Microcontroller, aber einige Teile können sogar auf normalen PCs verwendet werden.(<a href="https://github.com/gioblu/PJON">Beschreibung von PJON (Englisch) </a> / <a href="https://github.com/gioblu/PJON/wiki">Liste von unterstützten Geräten (Englisch)</a>)
+				MorseBin erlaubte jedoch nur Kommunikation in eine Richtung und war sehr langsam, aber der fundamentale Aufbau der elektrischen Signale hat sich bis zur neuesten Version nur wenig verändert. Wie das Protokoll genau funktioniert erkläre ich noch später.
 				Danach kam MorseBinNET, womit man schon ein kleines Netzwerk hatte mit bis zu 255 Geräten. MorseBinNET brauchte (und braucht bis Heute) nur eine Ader, aber da ich nicht wusste, dass man einen Pin von einem Arduino auch im 
 				Normalen Betrieb von einem Eingang zu einem Ausgang umstellen kann, musste man zwei Pins verwenden. Da MorseBinNET auf den Funktionen von MorseBin aufbaute, war es genauso langsam. Im Mai dieses Jahres (2021) habe ich dann 
 				MorseBinNET2 auf Github hochgeladen. (Auch hier konnte ich leider keine genaueren Daten finden als den ersten "Commit" auf GitHub) MorseBinNET2 ist identisch mit MorseBinNET, MorseBinNET2 ist jedoch erheblich schneller, nach 
@@ -30,6 +29,61 @@
 				also der Empfänger und der Versender nicht 100%ig miteinander syncron waren kamen die Bits in der Falschen Reihenfolge an. Gelöst habe ich das durch ein Startsignal, das länger ist als eine 0, wodurch ich es herausfiltern kann und nur 
 				dann auf die nächsten acht Bits hören kann, wodurch entweder ein Byte, das gerade Versendet wird, wo man den Anfang verpasst hat, nicht mehr empfangen wird oder das Byte intakt empfangen wird. Ich habe die Bytes in einer Zeichenfolge 
 				aus acht Zeichen, entweder eine 0 oder eine 1, gespeichert, ich bin nicht ganz zufrieden mit dieser Lösung, da sie unnötig viel Ram verbraucht, aber die Verarbeitung von Bytes in diesem Format ist sehr simpel.
+			</p>
+		</div>
+		<p></p>
+		<div class="textblock">
+			<h4>Das Netzwerk: MorseBinNET</h4>
+			<p>
+				Wie ich schon oben erzählt hatte, ist MorseBinNET eine Variante von MorseBin, mit der bis zu 255 Arduinos miteinander kommunizieren können, jedoch habe ich dieses Limit nicht getestet (und ich denke, das die limitierte
+				Geschwindikteit von MorseBinNET zu Bottlenecks führen könnte), aber in der Theorie ist ja alles möglich. ;) Der Aufbau der Netzwerk-Packets ist recht simpel, es werden pro Packet 4 Bytes versant, einmal den Addressanten, 
+				dann den Sender und zum Schluss noch 2 Bytes mit den eigentlichen Daten. Aber sobald MorseBinNET die Daten empfangen hat, ist die Arbeit noch nicht ganz zuende, denn ich hatte zu dem Zeitpunkt noch keinen guten weg gefunden, 
+				die Bytes am ende formatiert auszugeben, also musste man sie mit der "substring()"-Funktion noch auseinanderzerren. Wenn jeman gerade ein Packet versendet, warten MorseBinNET solange, bis dieser fertig ist und sendet erst 
+				dann, wen das Netzwerk wieder Frei ist. MorseBinNET war (und ist) ein einfaches Protokoll, das langsam ist, aber es funktionierte zuverlässig und war einfach zu implementieren
+			</p>
+		</div>
+		<p></p>
+		<div class="textblock">
+			<h4>Eine neue Ära: MorseBinNET2</h4>
+			<p>
+				Die Änderungen von MorseBinNET zu MorseBinNET2 sind entweder astronomisch, oder sehr klein, jenachdem aus welchem Winkel man sie Betrachtet. Die Art und Weise, wie die Bytes versendet werden, hat sich bis auf eine Sache, 
+				 der Geschwindikkeit, nicht verändert. MorseBinNET2 ist erheblich schneller als MorseBinNET oder MorseBin, denn nun dauert es nicht gefühlt Sekunden, um eine Nachricht zu versenden, es fühlt sich fast "instant" an. 
+				Ansonsten habe ich noch die Ausgabe der Empfangenen Bytes verbessert, nun als ein "public" Array, sodass man sich nur noch den Index für die Fehlermeldung, den Absender und die beiden Daten-Bytes merken muste, und nicht 
+				mehr Gefahr lief, die Nachricht an falschen Stellen zu "substringen". Durch die erhöte Geschwindigkeit sollte das Bottleneck, wenn viele Geräte am Netz hängen, auch erheblich vermindert sein, wenn überhaupt noch präsent. 
+				Dennoch konnte ich das nicht testen, da ich nur 4 Arduinos habe und nicht 70+.
+			</p>
+		</div>
+		<p></p>
+		<div class="textblock">
+			<h4>Nicht viel Neues: MorseBinNET2E</h4>
+			<p>Hier gibt es nicht viel zu sagen, ich habe einfach den Code so abgeändert, das nun statt 2 Daten-Bytes nun 8 gesendet und Empfangen werden.</p>
+		</div>
+		<p></p>
+		<div class="textblock">
+			<h4>Eine Menge Neues: MorseBinNET2EM</h4>
+			<p>
+				Bei der neuesten Variante von MorseBin (Stand: 27.10.2021) ist nun eine automatische Addressvergabe und Adressverwaltiung hinzugekommen. Rein technisch könnte man ein MorseBinNET2E-Gerät an diese Variante anschließen, 
+				jedoch ist es dann möglich, dass die Genutzte Addresse einem anderen Gerät gegeben wird. Sicherlich hätte es einen Weg gegeben, dass die einzelnen Geräte untereinander selbst ausmachen, ob eine Addresse verfügbar ist, 
+				es ist aber einfacher wenn ein dedizierter Arduino das tut. Der "Handshake", der stattfindet, wenn ein neues Gerät zum Netzwerk hinzugefügt wird ist recht einfach, es startet auf einer Standardadresse, die nicht anderweitig
+				vergeben wird. Dann "beantragt" es eine Adresse beim Gateway, das als einziges Gerät eine statische Addresse hat, das dann die niedrigste, verfügbare Adresse zurücksendet. Das Gerät kann auch eine "Wunschadresse" mitsenden, 
+				und falss diese frei sein sollte, gibt das Gateway diese auch zurück, sollte sie aber nicht frei sein, wird die normale Prozedur verwendet und die niedrigste freie Addresse vergeben. Sollte mal eine Anfrage irgendwie Verloren gehen, 
+				fragt der Arduino, der die Adresse haben will einfach noch mal nach, und falls er dann immer noch keine Adresse bekommt, hängt er sich selbst auf. Dadurch kann es zwar sein, das ein Gerät gerade einmal Pech hat und beide Anfragen nicht 
+				durchkommen, aber es deckt damit auch die Situation ab, das wenn alle Addressen vergeben sind, dass alle weiteren Geräte das Netzwerk nicht "vollspammen". Damit nun Addressen, wo der Arduino entfernt worden ist, wieder frei werden, 
+				gibt es einen weiteren Mechanismus, der von der Lease in den "echten" Computernetzwerken inspiriert ist. Jede Adresse ist 5 minuten gültig, danach wird sie einfach als "frei" markiert. Somit hat der Arduino die Aufgabe, seine Adresse 
+				zu bestätigen. Tut er das nicht, muss er eine Neue beantragen. Mit dieser Adressfreigabe umgehe ich das Problem, das ein Handshake von dem Gateway aus passieren muss, da es nicht gesagt ist, dass der betroffene Arduino antwortet, 
+				da alle MorseBin-Varianten komplett in Software implementiert sind. Der Arduino speichert einfach nur eine Zeitsignatur (Timestamp), wann er das letzte mal seine Adresse bestätigt oder bekommen hat und kann damit errechnen, ob seine 
+				Adresse noch gültig ist, ob die Lease fast abläuft und er die Adresse bestätigen muss oder ob er eine neue beantragen muss. Bei dieser Variante sind nicht alle 255 Adressen zu vergeben, eine ist die Standardadresse, die andere braucht das Gateway selbst, 
+				aber es sollten noch genug freie übrig bleiben, auch wenn ich auch hier die Scalierbarkeit nicht testen konnte. Es lebe die Theorie!
+			</p>
+		</div>
+		<p></p>
+		<div class="textBlock">
+			<h4>Ein paar abschließende Worte</h4>
+			<p>
+				Der Gesamte Sourcecode ist auf GitHub, jedoch nicht öffentlich einzusehen, ich konnte mich noch nicht dazu durchringen es öffentlich zu machen, da ich ohne eine anständige Doku nicht das Gefühl habe, das es für jemanden ohne große Programmiererfahrung 
+				nützlich sein könnte, vor allem, da ich von Anfang an auf Kompatibilität und "Ease of Use" gezielt habe. Aber ich finde es nicht ausreichend, einfach zu sgaen "schaue dir den Code an", da es für viele nicht im Bereich ihrer Fähigkeiten ligt, vor allem 
+				bei Personen, die Gerade erst anfangen, und da ich den Code nicht Kommentiert habe. Aber es sind ja nicht nur die Funktionen und Methoden die mann kennen muss, es gibt ja auch die elektrische Seite, wo auch noch ein paar Dinge beachtet werden müssen, 
+				damit MorseBin und alle Varianten überhaupt Funktionieren. Sollte ich den GitHub von jeglicher Variante einmal veröffentlichen, poste ich hier die Links zu den Repos.
 			</p>
 		</div>
 	</body>
