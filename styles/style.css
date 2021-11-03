@@ -27,6 +27,7 @@ p.center {
 }
 p.quote {
 	font-style: oblique;
+	text-align: center;
 }
 p.quote:before {
 	content:'"'
