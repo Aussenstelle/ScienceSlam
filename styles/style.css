@@ -24,6 +24,9 @@ h4 {
 	text-align: center;
 	font-family: "Courier New";
 }
+p.text {
+	font-family: "Georgia";
+}
 p.center {
 	text-align: center;
 }
