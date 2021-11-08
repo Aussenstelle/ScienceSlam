@@ -29,12 +29,13 @@ div.textblock-headline {
 	padding-left: 5px;
 	padding-right: 5px;
 	margin-top: 5px;
-	background-color: 00000;
-	color: FFFFF;
+	background-color: #00000;
+	color: #FFFFF;
 }
 h1 {
 	text-align: center;
 	font-family: "Gothic A1";
+	color: #FFFFF;
 }
 h4 {
 	text-align: center;
