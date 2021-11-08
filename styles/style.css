@@ -22,6 +22,13 @@ h1.headline{
 	font-family: "Courier New";
 	background-color: #00000;
 	color: #FFFFF;
+	
+}
+h4.headline{
+	text-align: center;
+	font-family: "Courier New";
+	background-color: #00000;
+	color: #FFFFF;
 }
 div.textblock-headline {
 	border: solid;
