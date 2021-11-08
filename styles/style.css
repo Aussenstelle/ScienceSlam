@@ -23,6 +23,19 @@ h1.headline{
 	background-color: #00000;
 	color: #FFFFF;
 }
+div.textblock-headline {
+	border: solid;
+	border-color: black;
+	padding-left: 2.5px;
+	margin-top: 2.5px;
+	margin-bottom: 5px;
+	background-color: ff9900;
+	overflow: hidden;
+	display: inline-block;
+	position: relative;
+	width: 98%;
+	//float: left;
+}
 h1 {
 	text-align: center;
 	font-family: "Gothic A1";
