@@ -30,6 +30,12 @@ h3.headlines{
 	background-color: black;
 	color: white;
 }
+h4.headlines{
+	text-align: center;
+	font-family: "Courier New";
+	background-color: black;
+	color: white;
+}
 div.textblock-headline {
 	border: solid;
 	border-color: black;
