@@ -93,7 +93,7 @@ iframe.menu {
 	height: 100%;
 	top: 50%;
 	left: 0;
-	transform: translate(-50%, 0);
+	transform: translate(0%, -50%);
 }
 div.textblock {
 	border: solid;
