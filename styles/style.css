@@ -3,7 +3,7 @@ a:hover {
 }
 
 html {
-	background-color: #aacc9b
+	background-color: aacc9b
 }
 body {
   width: 60%;
@@ -110,7 +110,7 @@ div.textblock-child {
 	padding-left: 2.5px;
 	margin-top: 2.5px;
 	margin-bottom: 5px;
-	background-color: white;
+	background-color: #fffff;
 	overflow: hidden;
 	display: inline-block;
 	position: relative;
