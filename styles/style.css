@@ -4,6 +4,7 @@ a:hover {
 
 html {
 	background-color: #003366;
+	filter: brightness(85%);
 }
 body {
   width: 60%;
