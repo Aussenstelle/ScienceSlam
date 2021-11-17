@@ -96,6 +96,14 @@ iframe.menu {
 	top: 0;
 	left: 0;
 }
+div.textblock_news {
+	border: solid;
+	border-color: black;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 5px;
+	background-color: #ff7e75;
+}
 div.textblock {
 	border: solid;
 	border-color: black;
