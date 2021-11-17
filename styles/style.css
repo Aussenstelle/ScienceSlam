@@ -3,8 +3,8 @@ a:hover {
 }
 
 html {
-	background-color: #003366;
-	color: lighten(#003366, 15%);
+	/*background-color: #003366;*/
+	background-color: lighten(#003366, 15%);
 }
 body {
   width: 60%;
