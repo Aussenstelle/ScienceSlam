@@ -1,5 +1,5 @@
 :root {
-	--boby-background: #003366;
+	--color-background: #003366;
 }
 a:hover {
 	color:red;
@@ -7,7 +7,7 @@ a:hover {
 
 html {
 	/*background-color: #003366;*/
-	background-color: rgba(var(--boby-background), 1);
+	background-color: rgba(var(--color-background), 1);
 }
 body {
   width: 60%;
