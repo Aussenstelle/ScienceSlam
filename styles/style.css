@@ -113,8 +113,8 @@ div.textblock-child {
 }
 h4 {
 	text-align: center;
-	margin: 1px;
 }
-h3 {
+h3.index-headline {
 	text-align: center;
+	margin: -1px;
 }
