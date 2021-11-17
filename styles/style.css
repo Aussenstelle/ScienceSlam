@@ -6,8 +6,7 @@ a:hover {
 }
 
 html {
-	/*background-color: #003366;*/
-	background-color: rgba(var(--color-background), 1);
+	background-color: #003366;
 }
 body {
   width: 60%;
