@@ -20,11 +20,11 @@ img {
 h1.headline{
 	text-align: center;
 	font-family: "Courier New";
-	background-color: #00000;
-	color: #FFFFF;
+	background-color: black;
+	color: white;
 	
 }
-h3.headlines{
+h3.headline{
 	text-align: center;
 	font-family: "Courier New";
 	background-color: black;
@@ -96,7 +96,7 @@ iframe.menu {
 	top: 0;
 	left: 0;
 }
-div.textblock_news {
+div.textblocknews {
 	border: solid;
 	border-color: black;
 	padding-left: 5px;
