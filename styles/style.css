@@ -48,12 +48,6 @@ div.headline {
 }
 h1 {
 	text-align: center;
-	font-family: "Gothic A1";
-	color: #FFFFF;
-}
-h4 {
-	text-align: center;
-	/*font-family: "Courier New";*/
 }
 p {
 	font-family: "Verdana";
@@ -118,4 +112,10 @@ div.textblock-child {
 	position: relative;
 	width: 98%;
 	//float: left;
+}
+h4 {
+	text-align: center;
+}
+h3 {
+	text-align: center;
 }
