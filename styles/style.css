@@ -93,7 +93,7 @@ div.textblock {
 	padding-left: 5px;
 	padding-right: 5px;
 	margin-top: 5px;
-	background-color: #7ab2cc;
+	background-color: #ccc47a;
 }
 div.textblock-child {
 	border: solid;
@@ -101,7 +101,7 @@ div.textblock-child {
 	padding-left: 2.5px;
 	margin-top: 2.5px;
 	margin-bottom: 5px;
-	background-color: #a1d0e6;
+	background-color: #ccc47a;
 	overflow: hidden;
 	display: inline-block;
 	position: relative;
