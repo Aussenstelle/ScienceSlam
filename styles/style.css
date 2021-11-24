@@ -1,12 +1,9 @@
-:root {
-	--color-background: #003366;
-}
 a:hover {
 	color:red;
 }
 
 html {
-	background-color: #003366;
+	background-color: #0080ff;
 }
 body {
   width: 60%;
