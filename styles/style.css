@@ -48,7 +48,7 @@ div.textblock-headline {
 h1 {
 	text-align: center;
 	font-family: "Gothic A1";
-	color: #FFFFF;
+	color: #FFFFFF;
 }
 h4 {
 	text-align: center;
@@ -123,5 +123,4 @@ div.textblock-child {
 	display: inline-block;
 	position: relative;
 	width: 98%;
-	//float: left;
 }
