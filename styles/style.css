@@ -47,15 +47,14 @@ div.textblock-headline {
 }
 ul.textblocks-listing {
 	padding-left: 10px;
-	
 	padding-right: 5px;
-	font-family: "Gothic A1";	
+	font-family: "Courier New";	
 }
 li.textblocks-listing {
 	padding-left: 10px;
 	padding-right: 5px;
 	padding-bottom: 5px;
-	font-family: "Gothic A1";	
+	font-family: "Courier New";	
 }
 h1 {
 	text-align: center;
