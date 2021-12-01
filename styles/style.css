@@ -116,7 +116,8 @@ h3.index-headline {
 	margin: -1px;
 }
 table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-	margin: 3px;
+	border: 1px solid black;
+	border-collapse: collapse;
+	margin: 2px;
+	padding: 2px;
 }
