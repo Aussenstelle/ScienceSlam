@@ -6,11 +6,11 @@ html {
 	background-color: #003366;
 }
 body {
-  width: 60%;
-  margin: 0 auto;
-  background-color: #33cccc;
-  padding: 0 20px 20px 20px;
-  border: 5px solid black;
+	width: 60%;
+	margin: 0 auto;
+	background-color: #33cccc;
+	padding: 0 20px 20px 20px;
+	border: 5px solid black;
 }
 img {
 	height: 500;
@@ -61,20 +61,20 @@ p.quote:after {
 	content:'"'
 }
 ol {
-  counter-reset: section;                /* Erstellt mit jedem ol Element
-                                            eine neue Instanz des
-                                            Abschnittszählers. */
-  list-style-type: none;
+	counter-reset: section;                	/* Erstellt mit jedem ol Element
+                                            	eine neue Instanz des
+                                            	Abschnittszählers. */
+	list-style-type: none;
 }
 li::before {
-  counter-increment: section;            /* Inkrementiert nur diese Instanz
-                                            des Abschnittszählers. */
-  content: counters(section,".") ". ";    /* Fügt den Wert aller Instanzen
-                                            des Abschnittszählers durch "."
-                                            getrennt hinzu. */
-                                         /* Falls < IE8 unterstützt werden soll,
-                                            sollte sichergestellt werden, dass
-                                            kein Leerzeichen nach dem ',' steht. */
+	counter-increment: section;            	/* Inkrementiert nur diese Instanz
+                                            	des Abschnittszählers. */
+	content: counters(section,".") ". ";    /* Fügt den Wert aller Instanzen
+                                            	des Abschnittszählers durch "."
+                                            	getrennt hinzu. */
+                                         	/* Falls < IE8 unterstützt werden soll,
+                                            	sollte sichergestellt werden, dass
+                                            	kein Leerzeichen nach dem ',' steht. */
 											/*Copied from developer.mozilla.org*/
 }
 iframe.menu {
