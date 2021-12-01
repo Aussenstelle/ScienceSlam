@@ -115,3 +115,7 @@ h3.index-headline {
 	text-align: center;
 	margin: -1px;
 }
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
