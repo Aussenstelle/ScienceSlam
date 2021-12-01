@@ -116,6 +116,7 @@ h3.index-headline {
 	margin: -1px;
 }
 table, th, td {
+	background-color: #ffad33;
 	border: 1px solid black;
 	border-collapse: collapse;
 	padding: 2px;
