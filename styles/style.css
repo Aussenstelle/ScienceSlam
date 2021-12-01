@@ -45,6 +45,14 @@ div.textblock-headline {
 	background-color: black;
 	color: white;
 }
+ul.textblocks-listing {
+	padding: 20px;
+	font-family: "Gothic A1";	
+}
+li.textblocks-listing {
+	padding: 20px;
+	font-family: "Gothic A1";	
+}
 h1 {
 	text-align: center;
 	font-family: "Gothic A1";
