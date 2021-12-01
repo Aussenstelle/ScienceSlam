@@ -46,11 +46,13 @@ div.textblock-headline {
 	color: white;
 }
 ul.textblocks-listing {
-	padding: 20px;
+	padding-left: 10px;
+	padding-right: 5px;
 	font-family: "Gothic A1";	
 }
 li.textblocks-listing {
-	padding: 20px;
+	padding-left: 10px;
+	padding-right: 5px;
 	font-family: "Gothic A1";	
 }
 h1 {
