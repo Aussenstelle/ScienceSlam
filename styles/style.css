@@ -118,4 +118,5 @@ h3.index-headline {
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
+	margin: 3px;
 }
