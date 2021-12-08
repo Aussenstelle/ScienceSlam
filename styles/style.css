@@ -17,11 +17,6 @@ img {
 	width: 700;
 	object-fit: contain;
 }
-h1 {
-	text-align: center;
-	margin: 1px;
-	
-}
 h3.headlines{
 	text-align: center;
 	font-family: "Courier New";
@@ -40,9 +35,6 @@ div.headline {
 	padding-left: 5px;
 	padding-right: 5px;
 	margin-top: 5px;
-}
-h1 {
-	text-align: center;
 }
 p {
 	font-family: "Verdana";
@@ -108,12 +100,19 @@ div.textblock-child {
 	width: 98%;
 	//float: left;
 }
-h4 {
+}
+h1 {
+	text-align: center;	
+}
+h3 {
 	text-align: center;
 }
 h3.index-headline {
 	text-align: center;
 	margin: -1px;
+}
+h4 {
+	text-align: center;
 }
 table, th, td {
 	background-color: #ffad33;
