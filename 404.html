@@ -1,11 +1,32 @@
 ---
 permalink: /404.html
 ---
+<!DOCTYPE html>
 <html>
-  <body>
-<h1>Sorry – Inhalt ist nicht da und wahrscheinlich im Urlaub</h1>  
-<p>Hier ist ein 404-Fehler aufgetreten – bitte gehen Sie auf die 
-Startseite <a href="https://www.html-seminar.de/">https://www.html-seminar.de/</a>
-</p> 
-    </body>
-  </html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 3s;  
+  animation-fill-mode: forwards;
+}
+
+@keyframes example {
+  from {top: 0px;}
+  to {top: 200px; background-color: blue;}
+}
+</style>
+</head>
+<body>
+
+<h1>CSS Animation</h1>
+
+<p>Let the div element retain the style values set by the last keyframe when the animation ends:</p>
+
+<div></div>
+
+</body>
