@@ -9,6 +9,6 @@ div {
 }
 
 @keyframes example {
-  from {top: 0px;}
+  from {top: -100px;}
   to {top: 200px; background-color: blue;}
 }
