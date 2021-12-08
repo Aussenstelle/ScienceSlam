@@ -12,19 +12,6 @@ body {
 	padding: 0 20px 20px 20px;
 	border: 5px solid black;
 }
-
-h4.padding {
-	padding-left: 10px;
-	padding-right: 5px;		
-}
-p.padding {
-	padding-left: 10px;
-	padding-right: 5px;		
-}
-p.padding-down {
-	padding-left: 10px;
-	padding-right: 5px;		
-}
 img {
 	height: 500;
 	width: 700;
@@ -36,7 +23,7 @@ h3.headlines{
 	background-color: black;
 	color: white;
 }
-h6.headline{
+h6.headline {
 	text-align: center;
 	font-family: "Courier New";
 	background-color: black;
