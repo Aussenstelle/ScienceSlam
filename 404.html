@@ -16,6 +16,18 @@ div {
   animation-duration: 3s;  
   animation-fill-mode: forwards;
 }
+div.a2 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  font-size: 80px;
+  color: white;
+  animation-name: example;
+  animation-duration: 3s;  
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
 
 @keyframes example {
   from {top: 0px;}
@@ -37,6 +49,7 @@ p{
 <p>Woom....</p>
 
 <div>4</div>
+<div class="a2">0</div>
 
 
 </body>
