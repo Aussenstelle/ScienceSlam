@@ -168,10 +168,27 @@ div.an {
   font-family: "Courier New";
   font-size: 30px;
 }
+div.an2 {
+  width: 400px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation-name: an2;
+  animation-duration: 3s;  
+  animation-fill-mode: both;
+  text-align: center;
+  font-family: "Courier New";
+  font-size: 30px;
+}
+@keyframes an2 {
+  0%   {background-color:red; left:0px; top:100px;}
+  50%  {background-color:blue; left:0px; top:0px;}
+  100% {background-color:red; left:0px; top:100px;}
 
+}
 @keyframes example {
   from {top: 0px; background-color: rgb(252, 252, 252); color: black;}
-  to {top: 200px; background-color: blue;color: white;}
+  to {top: 0px; background-color: blue;color: white;}
 }
 
 
