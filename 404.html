@@ -23,14 +23,18 @@ div.a2 {
   position: relative;
   font-size: 80px;
   color: white;
-  animation-name: example;
+  animation-name: example2;
   animation-duration: 3s;  
   animation-delay: 1s;
   animation-fill-mode: forwards;
-  padding: 10px;
+  padding-left: 80px;
 }
 
 @keyframes example {
+  from {top: 0px;}
+  to {top: 200px; background-color: blue;}
+}
+@keyframes example2 {
   from {top: 0px;}
   to {top: 200px; background-color: blue;}
 }
