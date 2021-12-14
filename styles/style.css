@@ -148,3 +148,6 @@ div.textblock-child {
 	position: relative;
 	width: 98%;
 }
+table, th, td {
+	border:1px solid black;
+  }
