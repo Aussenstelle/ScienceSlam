@@ -10,16 +10,14 @@ div {
   height: 100px;
   background: red;
   position: relative;
-  font-size: 80px;
-  color: white;
   animation-name: example;
   animation-duration: 3s;  
-  animation-fill-mode: forward
+  animation-delay: 2s;
+  animation-fill-mode: both;
 }
 
-
 @keyframes example {
-  from {top: 0px;}
+  from {top: 0px; background-color: rgb(252, 252, 252);}
   to {top: 200px; background-color: blue;}
 }
 h1 {
