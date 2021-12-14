@@ -6,6 +6,156 @@ permalink: /404.html
 <head>
   <meta http-equiv="Refresh" content="5; URL=https://aussenstelle.github.io/ScienceSlam/index.html">
 <style> 
+a:hover {
+	color:red;
+}
+
+html {
+	background-color: aacc9b
+}
+body {
+  width: 60%;
+  margin: 0 auto;
+  background-color: #dadada;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+h4.padding {
+	padding-left: 10px;
+	padding-right: 5px;		
+}
+p.padding {
+	padding-left: 10px;
+	padding-right: 5px;		
+}
+p.padding-down {
+	padding-left: 10px;
+	padding-right: 5px;		
+}
+img {
+	height: 500;
+	width: 700;
+	object-fit: contain;
+}
+h1.headline{
+	text-align: center;
+	font-family: "Courier New";
+	background-color: black;
+	color: white;
+	
+}
+h3.headline{
+	text-align: center;
+	font-family: "Courier New";
+	background-color: black;
+	color: white;
+}
+h6.headline{
+	text-align: center;
+	font-family: "Courier New";
+	background-color: black;
+	color: white;
+}
+div.textblock-headline {
+	border: solid;
+	border-color: black;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 5px;
+	background-color: black;
+	color: white;
+}
+ul.textblocks-listing {
+	padding-left: 10px;
+	padding-right: 5px;
+	font-family: "Verdana";	
+}
+li.textblocks-listing {
+	padding-left: 10px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	font-family: "Verdana";	
+}
+h1 {
+	text-align: center;
+	font-family: "Gothic A1";
+	color: #FFFFFF;
+}
+h4 {
+	text-align: center;
+	font-family: "Courier New";
+}
+p {
+	font-family: "Verdana";
+}
+p.center {
+	text-align: center;
+}
+p.quote {
+	font-style: oblique;
+	text-align: center;
+}
+p.quote:before {
+	content:'"'
+}
+p.quote:after {
+	content:'"'
+}
+ol {
+  counter-reset: section;                /* Erstellt mit jedem ol Element
+                                            eine neue Instanz des
+                                            Abschnittszählers. */
+  list-style-type: none;
+}
+li::before {
+  counter-increment: section;            /* Inkrementiert nur diese Instanz
+                                            des Abschnittszählers. */
+  content: counters(section,".") ". ";    /* Fügt den Wert aller Instanzen
+                                            des Abschnittszählers durch "."
+                                            getrennt hinzu. */
+                                         /* Falls < IE8 unterstützt werden soll,
+                                            sollte sichergestellt werden, dass
+                                            kein Leerzeichen nach dem ',' steht. */
+											/*Copied from developer.mozilla.org*/
+}
+iframe.menu {
+	border:none;
+	display: block;
+	position: fixed;
+	width: 19%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+div.textblock-news {
+	border: solid;
+	border-color: black;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 5px;
+	background-color: #ff7e75;
+}
+div.textblock {
+	border: solid;
+	border-color: black;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 5px;
+	background-color: #fafafa;
+}
+div.textblock-child {
+	border: solid;
+	border-color: black;
+	padding-left: 2.5px;
+	margin-top: 2.5px;
+	margin-bottom: 5px;
+	background-color: #fafafa;
+	overflow: hidden;
+	display: inline-block;
+	position: relative;
+	width: 98%;
+}
 div.an {
   width: 400px;
   height: 100px;
