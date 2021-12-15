@@ -55,7 +55,7 @@ h3.headline{
 	animation-duration: 3s;  
 	animation-fill-mode: both;
 }
-@keyframes fade2s {
+@keyframes fade2 {
 	from {top: 0px; background-color: rgb(0, 0, 0); color: black;}
 	to {top: 0px; background-color: rgb(0, 0, 0);color: white;}
   }
