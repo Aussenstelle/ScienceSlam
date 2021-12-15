@@ -150,3 +150,7 @@ div.textblock-child {
 table, th, td {
 	border:1px solid black;
   }
+table.sce, th.sce, td.sce {
+	border:1px solid black;
+  }
+   
