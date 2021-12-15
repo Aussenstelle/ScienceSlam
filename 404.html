@@ -181,7 +181,43 @@ div.an2 {
   font-family: "Courier New";
   font-size: 30px;
 }
+div.an3 {
+  width: 40px;
+  height: 40px;
+  background: red;
+  position: relative;
+  animation-name: an3;
+  animation-duration: 2s;  
+  animation-fill-mode: both;
+  text-align: center;
+  font-family: "Courier New";
+  font-size: 30px;
+}
+div.an4 {
+  width: 40px;
+  height: 40px;
+  background: red;
+  position: relative;
+  animation-name: an4;
+  animation-duration: 2s;  
+  animation-fill-mode: both;
+  text-align: center;
+  font-family: "Courier New";
+  font-size: 30px;
+}
 @keyframes an2 {
+  0%   {background-color:red; left:0px; top:100px;}
+  50%  {background-color:blue; left:0px; top:0px;}
+  100% {background-color:red; left:0px; top:100px;}
+
+}
+@keyframes an3 {
+  0%   {background-color:red; left:0px; top:100px;}
+  50%  {background-color:blue; left:0px; top:0px;}
+  100% {background-color:red; left:0px; top:100px;}
+
+}
+@keyframes an4 {
   0%   {background-color:red; left:0px; top:100px;}
   50%  {background-color:blue; left:0px; top:0px;}
   100% {background-color:red; left:0px; top:100px;}
@@ -211,18 +247,18 @@ div.an2 {
         <p class=padding-down>              </p>
         <p class=padding-down>              </p>
         <p class=padding-down>              </p>
-        <div class="an2"></div>
-        <p class=padding-down>              </p>
-        <p class=padding-down>              </p>
-        <p class=padding-down>              </p>
-        <p class=padding-down>              </p>
 		<table style="width:100%">
 			<tr>
 			  <td> <div class="an2"></div></td>
-			  <td> <div class="an2"></div></td>
-			  <td> <div class="an2"></div></td>
+			  <td> <div class="an3"></div></td>
+			  <td> <div class="an4"></div></td>
 			</tr>
 		  </table>
+        <p class=padding-down>_              </p>
+        <p class=padding-down>_              </p>
+        <p class=padding-down>_              </p>
+        <p class=padding-down>_              </p>
+		
 
       </div>
 		</div>
