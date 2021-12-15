@@ -3,79 +3,37 @@ a:hover {
 }
 
 html {
-	background-color: aacc9b
+	background-color: #003366;
 }
 body {
-  width: 60%;
-  margin: 0 auto;
-  background-color: #dadada;
-  padding: 0 20px 20px 20px;
-  border: 5px solid black;
-}
-
-h4.padding {
-	padding-left: 10px;
-	padding-right: 5px;		
-}
-p.padding {
-	padding-left: 10px;
-	padding-right: 5px;		
-}
-p.padding-down {
-	padding-left: 10px;
-	padding-right: 5px;		
+	width: 60%;
+	margin: 0 auto;
+	background-color: #33cccc;
+	padding: 0 20px 20px 20px;
+	border: 5px solid black;
 }
 img {
 	width: 10%;
 	height: 10%;
 }
-h1.headline{
-	text-align: center;
-	font-family: "Courier New";
-	background-color: black;
-	color: white;
-	
-}
-h3.headline{
+h3.headlines{
 	text-align: center;
 	font-family: "Courier New";
 	background-color: black;
 	color: white;
 }
-h6.headline{
+h6.headline {
 	text-align: center;
 	font-family: "Courier New";
 	background-color: black;
 	color: white;
 }
-div.textblock-headline {
+div.headline {
 	border: solid;
 	border-color: black;
 	padding-left: 5px;
 	padding-right: 5px;
 	margin-top: 5px;
-	background-color: black;
-	color: white;
-}
-ul.textblocks-listing {
-	padding-left: 10px;
-	padding-right: 5px;
-	font-family: "Verdana";	
-}
-li.textblocks-listing {
-	padding-left: 10px;
-	padding-right: 5px;
-	padding-bottom: 5px;
-	font-family: "Verdana";	
-}
-h1 {
-	text-align: center;
-	font-family: "Gothic A1";
-	color: #FFFFFF;
-}
-h4 {
-	text-align: center;
-	font-family: "Courier New";
 }
 p {
 	font-family: "Verdana";
@@ -94,20 +52,20 @@ p.quote:after {
 	content:'"'
 }
 ol {
-  counter-reset: section;                /* Erstellt mit jedem ol Element
-                                            eine neue Instanz des
-                                            Abschnittszählers. */
-  list-style-type: none;
+	counter-reset: section;                	/* Erstellt mit jedem ol Element
+                                            	eine neue Instanz des
+                                            	Abschnittszählers. */
+	list-style-type: none;
 }
 li::before {
-  counter-increment: section;            /* Inkrementiert nur diese Instanz
-                                            des Abschnittszählers. */
-  content: counters(section,".") ". ";    /* Fügt den Wert aller Instanzen
-                                            des Abschnittszählers durch "."
-                                            getrennt hinzu. */
-                                         /* Falls < IE8 unterstützt werden soll,
-                                            sollte sichergestellt werden, dass
-                                            kein Leerzeichen nach dem ',' steht. */
+	counter-increment: section;            	/* Inkrementiert nur diese Instanz
+                                            	des Abschnittszählers. */
+	content: counters(section,".") ". ";    /* Fügt den Wert aller Instanzen
+                                            	des Abschnittszählers durch "."
+                                            	getrennt hinzu. */
+                                         	/* Falls < IE8 unterstützt werden soll,
+                                            	sollte sichergestellt werden, dass
+                                            	kein Leerzeichen nach dem ',' steht. */
 											/*Copied from developer.mozilla.org*/
 }
 iframe.menu {
@@ -116,8 +74,9 @@ iframe.menu {
 	position: fixed;
 	width: 19%;
 	height: 100%;
-	top: 0;
+	top: 50%;
 	left: 0;
+	transform: translate(0%, -50%);
 }
 div.textblock-news {
 	border: solid;
@@ -133,20 +92,39 @@ div.textblock {
 	padding-left: 5px;
 	padding-right: 5px;
 	margin-top: 5px;
-	background-color: #fafafa;
+	background-color: #ff9900;
 }
 div.textblock-child {
 	border: solid;
 	border-color: black;
-	padding-left: 2.5px;
 	margin-top: 2.5px;
 	margin-bottom: 5px;
-	background-color: #fafafa;
+	background-color: #ff9900;
 	overflow: hidden;
 	display: inline-block;
 	position: relative;
 	width: 98%;
 }
+h1 {
+	text-align: center;	
+}
+h3 {
+	text-align: center;
+}
+h3.index-headline {
+	text-align: center;
+	margin: -1px;
+}
+h4 {
+	text-align: center;
+}
 table, th, td {
-	border:1px solid black;
-  }
+	background-color: #ffad33;
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 2px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
