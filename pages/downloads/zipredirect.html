@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Refresh" content="5; URL=https://github.com/Aussenstelle/ScienceSlam/archive/refs/heads/main.zip">
+<style> 
+a:hover {
+	color:red;
+}
+
+html {
+	background-color: aacc9b
+}
+body {
+  width: 60%;
+  margin: 0 auto;
+  background-color: #dadada;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+h4.padding {
+	padding-left: 10px;
+	padding-right: 5px;		
+}
+p.padding {
+	padding-left: 10px;
+	padding-right: 5px;		
+}
+p.padding-down {
+	padding-left: 10px;
+	padding-right: 5px;		
+}
+img {
+	height: 500;
+	width: 700;
+	object-fit: contain;
+}
+h1.headline{
+	text-align: center;
+	font-family: "Courier New";
+	background-color: black;
+	color: white;
+	
+}
+h3.headline{
+	text-align: center;
+	font-family: "Courier New";
+	background-color: black;
+	color: white;
+}
+h6.headline{
+	text-align: center;
+	font-family: "Courier New";
+	background-color: black;
+	color: white;
+}
+div.textblock-headline {
+	border: solid;
+	border-color: black;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 5px;
+	background-color: black;
+	color: white;
+}
+ul.textblocks-listing {
+	padding-left: 10px;
+	padding-right: 5px;
+	font-family: "Verdana";	
+}
+li.textblocks-listing {
+	padding-left: 10px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	font-family: "Verdana";	
+}
+h1 {
+	text-align: center;
+	font-family: "Gothic A1";
+	color: #FFFFFF;
+}
+h4 {
+	text-align: center;
+	font-family: "Courier New";
+}
+p {
+	font-family: "Verdana";
+}
+p.center {
+	text-align: center;
+}
+p.quote {
+	font-style: oblique;
+	text-align: center;
+}
+p.quote:before {
+	content:'"'
+}
+p.quote:after {
+	content:'"'
+}
+ol {
+  counter-reset: section;                /* Erstellt mit jedem ol Element
+                                            eine neue Instanz des
+                                            Abschnittszählers. */
+  list-style-type: none;
+}
+li::before {
+  counter-increment: section;            /* Inkrementiert nur diese Instanz
+                                            des Abschnittszählers. */
+  content: counters(section,".") ". ";    /* Fügt den Wert aller Instanzen
+                                            des Abschnittszählers durch "."
+                                            getrennt hinzu. */
+                                         /* Falls < IE8 unterstützt werden soll,
+                                            sollte sichergestellt werden, dass
+                                            kein Leerzeichen nach dem ',' steht. */
+											/*Copied from developer.mozilla.org*/
+}
+iframe.menu {
+	border:none;
+	display: block;
+	position: fixed;
+	width: 19%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+div.textblock-news {
+	border: solid;
+	border-color: black;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 5px;
+	background-color: #ff7e75;
+}
+div.textblock {
+	border: solid;
+	border-color: black;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 5px;
+	background-color: #fafafa;
+}
+div.textblock-child {
+	border: solid;
+	border-color: black;
+	padding-left: 2.5px;
+	margin-top: 2.5px;
+	margin-bottom: 5px;
+	background-color: #fafafa;
+	overflow: hidden;
+	display: inline-block;
+	position: relative;
+	width: 98%;
+}
+div.an {
+
+  height: 30px;
+  background: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 3s;  
+  animation-fill-mode: both;
+  text-align: center;
+  font-family: "Courier New";
+  font-size: 30px;
+  
+
+}
+div.an2 {
+  width: 40px;
+  height: 40px;
+  background: red;
+  position: relative;
+  animation-name: an2;
+  animation-duration: 1.8s;  
+  animation-fill-mode: both;
+  text-align: center;
+  font-family: "Courier New";
+  font-size: 30px;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: 3;
+}
+div.an3 {
+  width: 40px;
+  height: 40px;
+  background: red;
+  position: relative;
+  animation-name: an3;
+  animation-duration: 1.8s;  
+  animation-fill-mode: both;
+  text-align: center;
+  font-family: "Courier New";
+  font-size: 30px;
+  animation-direction: alternate-reverse;
+  animation-delay: 0.3s;
+  animation-iteration-count: 3;
+}
+div.an4 {
+  width: 40px;
+  height: 40px;
+  background: red;
+  position: relative;
+  animation-name: an4;
+  animation-duration: 1.8s;  
+  animation-fill-mode: both;
+  text-align: center;
+  font-family: "Courier New";
+  font-size: 30px;
+  animation-direction: alternate-reverse;
+  animation-delay: 0.6s;
+  animation-iteration-count: 3;
+}
+@keyframes an2 {
+  0%   {background-color:red; left:0px; top:100px;}
+  50%  {background-color:blue; left:0px; top:0px;}
+  100% {background-color:red; left:0px; top:100px;}
+
+}
+@keyframes an3 {
+  0%   {background-color:red; left:0px; top:100px;}
+  50%  {background-color:blue; left:0px; top:0px;}
+  100% {background-color:red; left:0px; top:100px;}
+
+}
+@keyframes an4 {
+  0%   {background-color:red; left:0px; top:100px;}
+  50%  {background-color:blue; left:0px; top:0px;}
+  100% {background-color:red; left:0px; top:100px;}
+
+}
+@keyframes example {
+  from {top: 0px; background-color: rgb(252, 252, 252); color: black;}
+  to {top: 0px; background-color: blue;color: white;}
+}
+
+
+</style>
+</head>
+<body>
+
+		<div class="textblock-headline">
+			<h3 class="headline" style="color: white;">Splash:</h3>
+			<h1 class="headline" style="color: white;">Error</h1>
+		</div>
+		
+		<div class="textblock-news">
+			<h4 class=padding>ScienceSlam Downloads</h4>
+			<div class="textblock-child">
+				<div class="an">Der Download startet in wenigen Sekunden</div>
+				<p class=padding-down>.....</p>
+        <p class=padding-down>&nbsp;              </p>
+		
+		<table style="width:100%;">
+			<tr>
+				<td> &nbsp;</td>
+				<td> <table>
+			<tr>
+			  <td> <div class="an2"></div></td>
+			  <td> <div class="an3"></div></td>
+			  <td> <div class="an4"></div></td>
+			</tr>
+		</table>
+		&nbsp;
+		</td>
+		<td> &nbsp;</td>
+		</tr>
+	</table>
+        <p class=padding-down>&nbsp;              </p>
+        <p class=padding-down>&nbsp;              </p>
+        <p class=padding-down>&nbsp;              </p>
+        <p class=padding-down>&nbsp;              </p>
+			
+
+      </div>
+		</div>
+
+		</div>
+	</body>
+			
+
+
