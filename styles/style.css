@@ -58,6 +58,9 @@ li::before {
                                             	kein Leerzeichen nach dem ',' steht. */
 											/*Copied from developer.mozilla.org*/
 /*}*/
+ol, li, ul {
+	font-family: "Verdana";
+}
 iframe.menu {
 	border:none;
 	display: block;
@@ -104,6 +107,7 @@ h4 {
 	text-align: center;
 }
 table, th, td {
+	font-family: "Verdana";
 	background-color: #ffad33;
 	border: 1px solid black;
 	border-collapse: collapse;
