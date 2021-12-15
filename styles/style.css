@@ -38,7 +38,6 @@ h1.headline{
 	height: 30px;
   	animation-name: fade;
   	animation-duration: 2s;  
-	animation-delay: 1s;
   	animation-fill-mode: both;
 	
 }
